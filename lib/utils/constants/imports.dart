@@ -6,3 +6,7 @@ export 'package:flutter/material.dart';
 export 'package:flutter_task/utils/constants/const.dart';
 export 'package:flutter_task/utils/constants/strings.dart';
 export 'package:flutter_task/utils/constants/colors.dart';
+export 'package:flutter_task/common/controllers/product_controller.dart';
+export 'package:flutter_task/utils/constants/styles.dart';
+export 'package:flutter_task/common/controllers/binder_controller.dart';
+export 'package:flutter_task/utils/constants/routes.dart';

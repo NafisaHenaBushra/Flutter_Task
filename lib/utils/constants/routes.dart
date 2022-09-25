@@ -1,7 +1,8 @@
+import 'package:flutter_task/screens/home_screen.dart';
 import 'package:get/get.dart';
 
-const String krMainScreen = '/main-screen';
+const String krHomeScreen = '/home-screen';
 
 List<GetPage<dynamic>>? routes = [
-  // GetPage(name: krMainScreen, page: () => MainScreen(), transition: Transition.noTransition),
+  GetPage(name: krHomeScreen, page: () => HomeScreen(), transition: Transition.noTransition),
 ];
