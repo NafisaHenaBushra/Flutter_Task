@@ -10,3 +10,7 @@ export 'package:flutter_task/common/controllers/product_controller.dart';
 export 'package:flutter_task/utils/constants/styles.dart';
 export 'package:flutter_task/common/controllers/binder_controller.dart';
 export 'package:flutter_task/utils/constants/routes.dart';
+export 'package:flutter_task/common/widgets/app_bar/custom_appbar.dart';
+export 'package:flutter_task/common/widgets/textfield/custom_textfield.dart';
+export 'package:flutter_task/utils/constants/resource.dart';
+export 'package:flutter_task/utils/utility_functions.dart';

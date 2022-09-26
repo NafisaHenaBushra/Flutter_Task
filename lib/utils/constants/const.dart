@@ -1,4 +1,3 @@
-
 //* device height and width
 import 'package:flutter/material.dart';
 
@@ -36,7 +35,8 @@ const double kSmallPaddingUnit = 4.0;
 //* empty sized box with only width
 const kEmptySizedBox = SizedBox();
 const kW4sizedBox = SizedBox(width: kSmallPaddingUnit);
-const kW8sizedBox = SizedBox(width: kSmallPaddingUnit*2);
+const kW8sizedBox = SizedBox(width: kSmallPaddingUnit * 2);
+const kW16sizedBox = SizedBox(width: kSmallPaddingUnit * 4);
 
 //* empty sized box with only height
 const kH32sizedBox = SizedBox(height: kSmallPaddingUnit * 8);
@@ -44,7 +44,8 @@ const kH24sizedBox = SizedBox(height: kSmallPaddingUnit * 6);
 const kH20sizedBox = SizedBox(height: kSmallPaddingUnit * 5);
 const kH16sizedBox = SizedBox(height: kSmallPaddingUnit * 4);
 const kH8sizedBox = SizedBox(height: kSmallPaddingUnit * 2);
+// const kH4sizedBox = SizedBox(height: kSmallPaddingUnit);
 
 const double kDotIndicatorDiameter = 8;
-const double h16 = 16;
+const double h18 = 18;
 const double h20 = 20;

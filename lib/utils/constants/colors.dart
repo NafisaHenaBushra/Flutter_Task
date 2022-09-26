@@ -13,14 +13,12 @@ const Color cNutralBlack300Color = Color(0xFF646464);
 const Color cSecondaryPk500Color = Color(0xFFDA2079);
 const Color cTransparentColor = Colors.transparent;
 
-LinearGradient cButtonGradient = LinearGradient(
-    colors: [
-      cTransparentColor,
-      cTransparentColor,
-      const Color(0xFF6210E1).withOpacity(.36),
-      const Color(0xFF1400AE),
-    ],
-    begin: Alignment.topCenter,
-    end: Alignment.bottomCenter,
-    stops: const [0, 0, 0.5, 1],
-  );
+const LinearGradient cButtonGradient = LinearGradient(
+  colors: [
+    Color(0xFF6210E1),
+    Color(0xFF1400AE),
+  ],
+  begin: Alignment.topCenter,
+  end: Alignment.bottomCenter,
+  stops: [0.39, 1],
+);
