@@ -1,3 +1,61 @@
+Map productDetails = {
+  "id": 1383,
+  "brand": {"name": "Rice", "image": "https://d1ojphegpburrh.cloudfront.net/media/brand_images/supplyline_logo.png", "header_image": null, "slug": "rice"},
+  "image": "https://d1ojphegpburrh.cloudfront.net/media/images/product/None/1383/%E0%A6%B8%E0%A6%9C_4.png",
+  "charge": {
+    "booking_price": 0.0,
+    "current_charge": 1880.0,
+    "discount_charge": null,
+    "selling_price": 2200.0,
+    "profit": 320.0,
+    "is_event": false,
+    "event_id": null,
+    "highlight": false,
+    "highlight_id": null,
+    "groupping": false,
+    "groupping_id": null,
+    "campaign_section_id": null,
+    "campaign_section": false,
+    "message": null
+  },
+  "images": [
+    {"id": 1456, "image": "https://d1ojphegpburrh.cloudfront.net/media/images/product/None/1463/%E0%A6%9A%E0%A6%B2_16.png", "is_primary": true, "product": 1463},
+    {"id": 1376, "image": "https://d1ojphegpburrh.cloudfront.net/media/images/product/None/1383/%E0%A6%B8%E0%A6%9C_4.png", "is_primary": true, "product": 1383}
+  ],
+  "slug": "-5s5b",
+  "product_name": "মোজাম্মেল সিদ্ধ খুদ- ৫০ কেজি",
+  "model": "",
+  "commission_type": "Percent",
+  "amount": "0.00",
+  "tag": "",
+  "description":
+      "                                     <font color=\"#000000\" face=\"Noto Sans, sans-serif\" style=\"margin: 0px; padding: 0px; color: rgb(0, 0, 0); font-family: &quot;Noto Sans&quot;, sans-serif; font-size: 16px; letter-spacing: 0.14px;\"><span style=\"margin: 0px; padding: 0px; letter-spacing: -0.3px;\">প্রদর্শিত বিক্রয়মূল্য এবং লাভের পরিমাণ পরিবর্তনশীল। বাজার এবং&nbsp;</span></font><span style=\"margin: 0px; padding: 0px; color: rgb(0, 0, 0); font-family: &quot;Noto Sans&quot;, sans-serif; font-size: 16px; letter-spacing: -0.3px;\">বিক্রেতার</span><font color=\"#000000\" face=\"Noto Sans, sans-serif\" style=\"margin: 0px; padding: 0px; color: rgb(0, 0, 0); font-family: &quot;Noto Sans&quot;, sans-serif; font-size: 16px; letter-spacing: 0.14px;\"><span style=\"margin: 0px; padding: 0px; letter-spacing: -0.3px;\">&nbsp;বিবেচনার উপর নির্ভরশীল।</span></font>                                     ",
+  "note": "                                                                                    ",
+  "embadded_video_link": "                                          ",
+  "maximum_order": 100,
+  "stock": 848,
+  "is_back_order": false,
+  "specification": "<|>",
+  "warranty": "                                                                                    ",
+  "pre_order": false,
+  "product_review": 5,
+  "is_seller": false,
+  "is_phone": false,
+  "will_show_emi": false,
+  "badge": null,
+  "is_active": true,
+  "created_at": "2021-09-23T17:17:37.852953+06:00",
+  "updated_at": "2022-09-19T21:37:13.050814+06:00",
+  "language": null,
+  "seller": "SupplyLine",
+  "combo": null,
+  "created_by": "qtecsl",
+  "updated_by": null,
+  "category": [18],
+  "related_product": [],
+  "filter_value": []
+};
+
 List results = [
   {
     "id": 1383,

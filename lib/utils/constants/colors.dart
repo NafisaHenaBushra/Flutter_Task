@@ -8,6 +8,7 @@ const Color cTextFieldHintColor = Color(0xFF989898);
 const Color cTextFieldIconColor = Color(0xFFA7A7A7);
 const Color cErrorR500Color = Color(0xFFC62828);
 const Color cErrorRedShadeColor = Color(0xFFFFCCCC);
+const Color cNutralBlack500Color = Color(0xFF19181B);
 const Color cNutralBlack400Color = Color(0xFF323232);
 const Color cNutralBlack300Color = Color(0xFF646464);
 const Color cSecondaryPk500Color = Color(0xFFDA2079);

@@ -23,7 +23,6 @@ class CustomAppBar extends StatelessWidget {
       elevation: 0,
       backgroundColor: cTransparentColor,
       leadingWidth: kCommonBackSpace,
-      // centerTitle: true,
       titleSpacing: onBack != null ? 0 : (kSmallPaddingUnit * 5),
       title: title == null
           ? null
@@ -36,7 +35,11 @@ class CustomAppBar extends StatelessWidget {
       leading: onBack != null
           ? IconButton(
               onPressed: onBack,
-              icon: const Icon(Icons.arrow_back, size: kIconSize16),
+              icon: const Icon(
+                Icons.arrow_back,
+                size: kIconSize24,
+                color: cNutralBlack400Color,
+              ),
             )
           : null,
       actions: action != null ? [for (var v in action!) v, kW8sizedBox] : null,

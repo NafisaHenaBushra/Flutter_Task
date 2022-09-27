@@ -6,7 +6,7 @@ double width = 0.0;
 double keyboardValue = 0.0;
 
 const double kAppBarHeight = 56.0;
-const double kCommonBackSpace = 60.0;
+const double kCommonBackSpace = 50.0;
 
 BorderRadius k5BorderRadius = BorderRadius.circular(5);
 BorderRadius k15BorderRadius = BorderRadius.circular(15);
@@ -22,6 +22,7 @@ const double kFontSize12 = 12;
 const double kFontSize8 = 8;
 
 //* icon size
+const double kIconSize24 = 24;
 const double kIconSize20 = 20;
 const double kIconSize16 = 16;
 
@@ -44,7 +45,7 @@ const kH24sizedBox = SizedBox(height: kSmallPaddingUnit * 6);
 const kH20sizedBox = SizedBox(height: kSmallPaddingUnit * 5);
 const kH16sizedBox = SizedBox(height: kSmallPaddingUnit * 4);
 const kH8sizedBox = SizedBox(height: kSmallPaddingUnit * 2);
-// const kH4sizedBox = SizedBox(height: kSmallPaddingUnit);
+const kH4sizedBox = SizedBox(height: kSmallPaddingUnit);
 
 const double kDotIndicatorDiameter = 8;
 const double h18 = 18;
