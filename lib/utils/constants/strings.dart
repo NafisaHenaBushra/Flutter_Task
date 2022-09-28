@@ -22,16 +22,10 @@ const String ksCart = 'কার্ট';
 const String ksBuyIt = 'এটি কিনুন';
 
 //* api call related strings
-const String ksWarning = 'Warning';
 const String ksAnErrorOccurred = 'An error occurred, unable to complete request now';
 const String ksConnectionTimeoutMessage = 'Connection timed out';
 const String ksNoInternetConnectionMessage = 'You are not connected to internet';
-const String ksLoading = 'Loading...';
-const String ksTryAgain = 'Try again';
-const String ksReload = 'Reload';
 const String ksSuccess = 'Success';
 const String ksError = 'Error';
-const String ksInfo = 'Info';
-const String ksSelectPriceRange = 'Select price range';
-const String ksSelectCategoryToFindCards = 'Select category first to find your desired card';
-const String ksNoDataAvailable = 'No data available';
+const String ksNotAvailable = 'NA';
+const String ksNoDataAvailable = 'কোন প্রোডাক্ট নেই!';

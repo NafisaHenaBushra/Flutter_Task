@@ -24,7 +24,7 @@ void errorSnackBar(title, message, duration) {
     backgroundColor: cErrorR500Color,
     colorText: cWhiteColor,
     maxWidth: 400,
-    duration: Duration(microseconds: duration),
+    duration: Duration(milliseconds: duration),
   );
 }
 
@@ -35,6 +35,6 @@ void successSnackBar(title, message, duration) {
     backgroundColor: cSuccessColor,
     colorText: cWhiteColor,
     maxWidth: 400,
-    duration: Duration(microseconds: duration),
+    duration: Duration(milliseconds: duration),
   );
 }

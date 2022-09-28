@@ -21,20 +21,21 @@ class HomeScreen extends StatelessWidget {
               label: ksFindTheProductYouWant,
               suffixIcon: Icons.search,
               textEditingController: productController.searchTextEditingController,
+              onChanged: (v) => productController.getProductList(),
             ),
           ),
           kH8sizedBox,
           Expanded(
             child: Obx(
               () => RefreshIndicator(
-                color: const Color(0xFF6210E1),
+                color: cPrymaryColor,
                 backgroundColor: cWhiteColor,
                 strokeWidth: 2.0,
                 onRefresh: () async {
                   productController.searchTextEditingController.clear();
                   await productController.getProductList();
                 },
-                child: productController.productList.isEmpty
+                child: (productController.productList.isEmpty && !productController.isLoadingProductList.value)
                     ? CustomScrollView(
                         physics: const AlwaysScrollableScrollPhysics(),
                         slivers: [
@@ -44,7 +45,7 @@ class HomeScreen extends StatelessWidget {
                               children: [
                                 SizedBox(
                                   width: width * .7,
-                                  child: Image.asset(kuNoDataView),
+                                  child: Image.asset(kiNoDataView),
                                 ),
                                 kH24sizedBox,
                                 Text(ksNoDataAvailable, style: titleMediumTextStyle(cNutralBlack500Color)),
@@ -111,7 +112,9 @@ class GridItemCard extends StatelessWidget {
             child: TextButton(
               onPressed: () {
                 productController.selectedProductIndex.value = index;
+                productController.searchTextEditingController.clear();
                 Get.toNamed(krProductDetails);
+                productController.getProductDetails(item['slug']);
               },
               style: kTextButtonStyle,
               child: Padding(
@@ -132,15 +135,15 @@ class GridItemCard extends StatelessWidget {
                         child: (item['stock'] == 0) ? Text(ksStockOut, style: footNoteFieldTextStyle(cErrorR500Color)) : null,
                       ),
                     ),
-                    Image.network(
-                      item['image'],
-                      height: h20 * 6,
+                    ClipRRect(
+                      borderRadius: k15BorderRadius,
+                      child: item['image'] == null ? Image.asset(kiNoImage, height: h20 * 6) : Image.network(item['image'], height: h20 * 6),
                     ),
                     kH20sizedBox,
                     SizedBox(
                       height: h20 * 2,
                       child: Text(
-                        item['product_name'],
+                        item['product_name'] ?? ksNotAvailable,
                         maxLines: 2,
                         overflow: TextOverflow.ellipsis,
                         style: footNoteFieldTextStyle(cNutralBlack400Color),
@@ -204,7 +207,7 @@ class GridItemCard extends StatelessWidget {
         if (item['stock'] != 0)
           Positioned(
             bottom: 0,
-            child: CounterContainer(index: index, maxOrder: item['maximum_order']),
+            child: CounterContainer(index: index, maxOrder: item['maximum_order'] ?? item['stock']),
           ),
       ],
     );

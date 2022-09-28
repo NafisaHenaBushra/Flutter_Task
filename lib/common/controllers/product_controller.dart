@@ -1,6 +1,8 @@
 import 'package:flutter_task/utils/constants/imports.dart';
+// import 'package:hive_flutter/hive_flutter.dart';
 
 class ProductController extends GetxController {
+  // final Rx<Box?> counterBox = Rx<Box?>(null);
   final RxList count = RxList();
   final RxInt selectedProductIndex = RxInt(-1);
   final TextEditingController searchTextEditingController = TextEditingController();
@@ -17,7 +19,7 @@ class ProductController extends GetxController {
   |--------------------------------------------------------------------------
   */
 
-  final RxBool isLoadingProductList = RxBool(false);
+  final RxBool isLoadingProductList = RxBool(true);
   final RxList productList = RxList();
   final subLink = Rx<String?>(null);
   final scrolled = RxBool(false);
@@ -36,6 +38,7 @@ class ProductController extends GetxController {
         productList.clear();
         count.clear();
         productList.addAll(map['data']['products']['results']);
+        // counterBox.value = await Hive.openBox('count');
         count.addAll(RxList<RxInt>.generate(productList.length, (int index) => RxInt(0)));
 
         // ll(productList.length);
@@ -94,15 +97,17 @@ class ProductController extends GetxController {
   | //! info:: get product details api
   |--------------------------------------------------------------------------
   */
+  final RxBool isLoadingProductDetails = RxBool(true);
 
   final RxMap productDetails = RxMap();
   Future<dynamic> getProductDetails(slug) async {
     try {
       final apiController = ApiController();
-      isLoadingProductList.value = true;
+      isLoadingProductDetails.value = true;
+      ll('here');
 
       var response = await apiController.commonGet(
-        url: kuFlutterTaskMainUrl + kuProductDetails,
+        url: kuFlutterTaskMainUrl + kuProductDetails + slug,
       );
 
       if (response['status'] == 'success') {
@@ -110,7 +115,7 @@ class ProductController extends GetxController {
 
         productDetails.clear();
         productDetails.addAll(map['data']);
-        isLoadingProductList.value = false;
+        isLoadingProductDetails.value = false;
         return true;
       } else {
         errorSnackBar(ksError.tr, response['message'], 1500);

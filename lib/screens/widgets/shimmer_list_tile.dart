@@ -25,14 +25,25 @@ class ShimmerListTile extends StatelessWidget {
             child: Container(
               decoration: BoxDecoration(
                 borderRadius: k15BorderRadius,
-                color: cWhiteColor,
+                color: cWhiteColor.withOpacity(.4),
               ),
               padding: const EdgeInsets.all(kSmallPaddingUnit * 2),
               child: Column(
                 children: [
+                  Align(
+                    alignment: Alignment.topRight,
+                    child: Container(
+                      height: h20,
+                      padding: const EdgeInsets.symmetric(horizontal: kSmallPaddingUnit * 2),
+                    ),
+                  ),
                   Container(
                     height: h20 * 6,
-                    width: h20 * 4,color: cWhiteColor,
+                    width: h20 * 4,
+                    decoration: BoxDecoration(
+                      borderRadius: k15BorderRadius,
+                      color: cWhiteColor,
+                    ),
                   ),
                   kH20sizedBox,
                   SizedBox(
@@ -97,10 +108,10 @@ class ShimmerListTile extends StatelessWidget {
               ),
             ),
           ),
-            Positioned(
-              bottom: 0,
-              child: CounterContainer(index: 0, maxOrder: 100),
-            ),
+          Positioned(
+            bottom: 0,
+            child: CounterContainer(index: 0, maxOrder: 100),
+          ),
         ],
       ),
     );
