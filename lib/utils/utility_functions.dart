@@ -16,3 +16,25 @@ void unfocus(context) {
 void ll(message) {
   log(message.toString());
 }
+
+void errorSnackBar(title, message, duration) {
+  Get.snackbar(
+    title,
+    message,
+    backgroundColor: cErrorR500Color,
+    colorText: cWhiteColor,
+    maxWidth: 400,
+    duration: Duration(microseconds: duration),
+  );
+}
+
+void successSnackBar(title, message, duration) {
+  Get.snackbar(
+    title,
+    message,
+    backgroundColor: cSuccessColor,
+    colorText: cWhiteColor,
+    maxWidth: 400,
+    duration: Duration(microseconds: duration),
+  );
+}

@@ -625,3 +625,64 @@ List results = [
     "filter_value": []
   }
 ];
+
+Map abd = {
+  'id': 46,
+  'brand': {
+    'name': 'Abul Khair Consumer Goods',
+    'image': 'https://d1ojphegpburrh.cloudfront.net/media/brand_images/abul_Khair.png',
+    'header_image': 'https://d1ojphegpburrh.cloudfront.net/media/brand_images/Untitled_design_1.png',
+    'slug': 'abul-khair-consumer-goods',
+  },
+  'image': 'https://d1ojphegpburrh.cloudfront.net/media/images/product/None/46/seylon400g.png',
+  'charge': {
+    'booking_price': 0.0,
+    'current_charge': 180.0,
+    'discount_charge': null,
+    'selling_price': null,
+    'profit': null,
+    'is_event': false,
+    'event_id': null,
+    'highlight': false,
+    'highlight_id': null,
+    'groupping': false,
+    'groupping_id': null,
+    'campaign_section_id': null,
+    'campaign_section': false,
+    'message': null
+  },
+  'images': [
+    {'id': 39, 'image': 'https://d1ojphegpburrh.cloudfront.net/media/images/product/None/46/seylon400g.png', 'is_primary': true, 'product': 46}
+  ],
+  'slug': '-tbte',
+  'product_name': 'সিলন চা ৪০০ গ্রাম',
+  'model': 'Tea',
+  'commission_type': 'Percent',
+  'amount': 0.00,
+  'tag': 'Tea',
+  'description': '',
+  'note': '<span style="letter-spacing: 0.14px;">tea</span>',
+  'embadded_video_link': '',
+  'maximum_order': 100,
+  'stock': 0,
+  'is_back_order': false,
+  'specification': '<|>',
+  'warranty': '',
+  'pre_order': false,
+  'product_review': 5,
+  'is_seller': false,
+  'is_phone': false,
+  'will_show_emi': false,
+  'badge': null,
+  'is_active': true,
+  'created_at': '2021-07-08T18:04:17.998683+06:00',
+  'updated_at': '2022-07-18T18:00:20.372306+06:00',
+  'language': null,
+  'seller': 'AKCG',
+  'combo': null,
+  'created_by': 'qtecsl',
+  'updated_by': null,
+  'category': [8],
+  'related_product': [],
+  'filter_value': []
+};

@@ -13,6 +13,8 @@ dependencies:
   flutter:
     sdk: flutter
   get: ^4.6.5
+  http: ^0.13.5
+  shimmer: ^2.0.0
 
 dev_dependencies:
   flutter_lints: ^2.0.0

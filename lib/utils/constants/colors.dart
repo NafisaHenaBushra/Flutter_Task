@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 //* In App colors
 const Color cPurpleBGP10Color = Color(0xFFF7F2FF);
 const Color cWhiteColor = Color(0xFFFFFFFF);
+const Color cSuccessColor = Colors.green;
 const Color cTextFieldTextColor = Color(0xFF1D1D1D);
 const Color cTextFieldHintColor = Color(0xFF989898);
 const Color cTextFieldIconColor = Color(0xFFA7A7A7);

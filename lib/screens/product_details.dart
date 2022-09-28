@@ -28,7 +28,7 @@ class ProductDetails extends StatelessWidget {
             child: CustomTextField(
               label: ksFindTheProductYouWant,
               suffixIcon: Icons.search,
-              textEditingController: TextEditingController(),
+              textEditingController: productController.searchTextEditingController,
             ),
           ),
           kH8sizedBox,
