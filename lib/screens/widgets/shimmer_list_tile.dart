@@ -110,7 +110,7 @@ class ShimmerListTile extends StatelessWidget {
           ),
           Positioned(
             bottom: 0,
-            child: CounterContainer(index: 0, maxOrder: 100),
+            child: CounterContainer(id: 0, maxOrder: 100),
           ),
         ],
       ),

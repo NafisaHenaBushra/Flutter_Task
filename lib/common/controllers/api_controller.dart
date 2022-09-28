@@ -12,7 +12,7 @@ class ApiController {
   }) async {
     final http.Client client = http.Client();
     final Uri uri = Uri.parse(url);
-    ll(url);
+    // ll(url);
     http.Response response;
     String error = ksAnErrorOccurred.tr;
     try {

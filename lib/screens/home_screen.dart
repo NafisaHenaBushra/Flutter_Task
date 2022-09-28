@@ -111,7 +111,7 @@ class GridItemCard extends StatelessWidget {
             ),
             child: TextButton(
               onPressed: () {
-                productController.selectedProductIndex.value = index;
+                productController.selectedProductId.value = item['id'];
                 productController.searchTextEditingController.clear();
                 Get.toNamed(krProductDetails);
                 productController.getProductDetails(item['slug']);
@@ -207,7 +207,7 @@ class GridItemCard extends StatelessWidget {
         if (item['stock'] != 0)
           Positioned(
             bottom: 0,
-            child: CounterContainer(index: index, maxOrder: item['maximum_order'] ?? item['stock']),
+            child: CounterContainer(id: item['id'], maxOrder: item['maximum_order'] ?? item['stock']),
           ),
       ],
     );

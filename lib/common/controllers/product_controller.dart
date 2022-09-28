@@ -1,10 +1,10 @@
 import 'package:flutter_task/utils/constants/imports.dart';
-// import 'package:hive_flutter/hive_flutter.dart';
+import 'package:hive_flutter/hive_flutter.dart';
 
 class ProductController extends GetxController {
-  // final Rx<Box?> counterBox = Rx<Box?>(null);
-  final RxList count = RxList();
-  final RxInt selectedProductIndex = RxInt(-1);
+  final Rx<Box?> counterBox = Rx<Box?>(null);
+  final RxMap count = RxMap();
+  final RxInt selectedProductId = RxInt(-1);
   final TextEditingController searchTextEditingController = TextEditingController();
 
   @override
@@ -38,10 +38,18 @@ class ProductController extends GetxController {
         productList.clear();
         count.clear();
         productList.addAll(map['data']['products']['results']);
-        // counterBox.value = await Hive.openBox('count');
-        count.addAll(RxList<RxInt>.generate(productList.length, (int index) => RxInt(0)));
 
-        // ll(productList.length);
+        counterBox.value = await Hive.openBox('count');
+
+        dynamic getCounterData = counterBox.value!.get('count') ?? {};
+
+        getCounterData.forEach((key, value) => count.addEntries({key: RxInt(value)}.entries));
+        for (int i = 0; i < productList.length; i++) {
+          if (!count.containsKey(productList[i]['id'])) count.addEntries({productList[i]['id']: RxInt(0)}.entries);
+        }
+
+        restoreCounterBox();
+
         subLink.value = map['data']['products']['next'];
         if (subLink.value != null) {
           scrolled.value = false;
@@ -76,9 +84,14 @@ class ProductController extends GetxController {
         Map<String, dynamic> map = response;
 
         productList.addAll(map['data']['products']['results']);
-        count.addAll(RxList<RxInt>.generate(productList.length, (int index) => RxInt(0)));
+        for (int i = 0; i < productList.length; i++) {
+          if (!count.containsKey(productList[i]['id'])) count.addEntries({productList[i]['id']: RxInt(0)}.entries);
+        }
+        for (int i = 0; i < productList.length; i++) {
+          if (!count.containsKey(productList[i]['id'])) count.addEntries({productList[i]['id']: RxInt(0)}.entries);
+        }
+        restoreCounterBox();
 
-        // ll(productList.length);
         subLink.value = map['data']['products']['next'];
         scrolled.value = false;
         return true;
@@ -90,6 +103,12 @@ class ProductController extends GetxController {
       ll('getMoreCardList error: $e');
       return false;
     }
+  }
+
+  void restoreCounterBox() async {
+    dynamic countData = {};
+    count.forEach((key, value) => countData.addEntries({key: value.value}.entries));
+    counterBox.value!.put('count', countData);
   }
 
   /*
@@ -104,7 +123,6 @@ class ProductController extends GetxController {
     try {
       final apiController = ApiController();
       isLoadingProductDetails.value = true;
-      ll('here');
 
       var response = await apiController.commonGet(
         url: kuFlutterTaskMainUrl + kuProductDetails + slug,

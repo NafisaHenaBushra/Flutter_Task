@@ -1,7 +1,15 @@
 import 'package:flutter_task/utils/constants/imports.dart';
+import 'package:hive_flutter/hive_flutter.dart';
+import 'package:path_provider/path_provider.dart' as path_provider;
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+
+  //* info:: hive initialization
+  await Hive.initFlutter();
+  var directory = await path_provider.getApplicationDocumentsDirectory();
+  Hive.init(directory.path);
+  
   //* status bar theme
   SystemChrome.setSystemUIOverlayStyle(
     const SystemUiOverlayStyle(

@@ -197,10 +197,10 @@ class ProductDetails extends StatelessWidget {
                                     ],
                                   ),
                                 ),
-                                if (productController.count[productController.selectedProductIndex.value].value > 0)
+                                if (productController.count[productController.selectedProductId.value].value > 0)
                                   Positioned(
                                     top: h18 * 2,
-                                    child: CounterContainer(index: productController.selectedProductIndex.value, maxOrder: item['maximum_order'] ?? item['stock']),
+                                    child: CounterContainer(id: productController.selectedProductId.value, maxOrder: item['maximum_order'] ?? item['stock']),
                                   ),
                                 Positioned(
                                   top: 90,
@@ -218,20 +218,21 @@ class ProductDetails extends StatelessWidget {
                                               onPressed: () {
                                                 Get.back();
                                                 successSnackBar(ksSuccess, 'প্রোডাক্টটি কেনার জন্য ধন্যবাদ!', 1500);
-                                                productController.count[productController.selectedProductIndex.value].value = 0;
+                                                productController.count[productController.selectedProductId.value].value = 0;
+                                                productController.restoreCounterBox();
                                               },
                                               style: kTextButtonStyle,
                                               child: Center(
                                                 child: Column(
                                                   mainAxisAlignment: MainAxisAlignment.center,
                                                   children: [
-                                                    if (productController.count[productController.selectedProductIndex.value].value > 0)
+                                                    if (productController.count[productController.selectedProductId.value].value > 0)
                                                       const Padding(
                                                         padding: EdgeInsets.only(bottom: kSmallPaddingUnit),
                                                         child: Icon(Icons.shopping_cart, color: cWhiteColor, size: kIconSize20),
                                                       ),
                                                     Text(
-                                                      productController.count[productController.selectedProductIndex.value].value > 0 ? ksCart : ksBuyIt,
+                                                      productController.count[productController.selectedProductId.value].value > 0 ? ksCart : ksBuyIt,
                                                       style: balooDa2SmallFieldTextStyle(cWhiteColor).copyWith(fontSize: kFontSize16),
                                                     ),
                                                   ],
@@ -241,7 +242,7 @@ class ProductDetails extends StatelessWidget {
                                           ),
                                         ),
                                       ),
-                                      if (productController.count[productController.selectedProductIndex.value].value > 0)
+                                      if (productController.count[productController.selectedProductId.value].value > 0)
                                         Positioned(
                                           right: 0,
                                           top: kSmallPaddingUnit,
@@ -255,7 +256,7 @@ class ProductDetails extends StatelessWidget {
                                             ),
                                             child: Center(
                                               child: Text(
-                                                productController.count[productController.selectedProductIndex.value].value.toString(),
+                                                productController.count[productController.selectedProductId.value].value.toString(),
                                                 style: footNoteFieldTextStyle(cErrorR500Color).copyWith(fontSize: kFontSize16),
                                               ),
                                             ),
