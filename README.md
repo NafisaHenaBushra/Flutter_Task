@@ -1,16 +1,32 @@
-# flutter_task
+# Flutter Task
 
-A new Flutter project.
+A Flutter E-Commerce app with lots of components like routing, navigation, cards, form elements, etc. Check out demo
+
+![](demo/Screenshot.png)
+
+![](demo/Screen_Recording.gif)
+
+## What's inside
+
+- Routing
+- State Managemet using [get](https://pub.dev/packages/get)
+- Cards, List Items
+- Horizontal Card Slider
+- Snackbar to show masseges
+
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+#### 1. Clone and Install
 
-A few resources to get you started if this is your first Flutter project:
+```bash
+# Clone the repo
+git clone https://github.com/NafisaHenaBushra/Flutter_Task.git
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+# Navigate to clonned folder and Install dependencies
+cd flutter_eCommerce_ui_kit && flutter packages get
+```
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Contributing
+
+If you find any problems, please [open an issue](https://github.com/NafisaHenaBushra/Flutter_Task/issues/new) or submit a fix as a pull request.
